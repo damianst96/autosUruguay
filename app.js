@@ -1,10 +1,7 @@
 let autosUruguay = require("./autosUruguay");
 
-// autosUruguay.autosBYD.forEach(function(autos){
-//     console.log(autos.consultarPrecio());
-// });
+function consultarPrecio(auto){
+    return "El " + auto.marca + " " + auto.modelo + " " + auto.version + " cuesta: " + auto.precio;
+}
 
-// preciosAlfaRomeo();
-// preciosBYD();
-// preciosCoradir();
-autosUruguay.preciosPorsche();
+console.log(consultarPrecio(autosUruguay.boxster20));

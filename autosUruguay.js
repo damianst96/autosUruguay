@@ -52,6 +52,7 @@ class Porsche {
     }
 }
 
+
 let giulia20 = new AlfaRomeo("Alfa Romeo", "Giulia", "2.0 Turbo 200 AT8 Distinctive", "U$S 69.900");
 let giuliaQ = new AlfaRomeo("Alfa Romeo", "Giulia", "2.9 V6 Bi-Turbo AT8 Quadrifoglio", "U$S 209.990");
 let stelvio20 = new AlfaRomeo("Alfa Romeo", "Stelvio", "2.0 Turbo 280 AT8 Super", "U$S 113.490");
@@ -72,6 +73,7 @@ let autosCoradir = [chiki, tito];
 let boxster20 = new Porsche("Porsche", "Boxster", "2.0 T PDK", "U$S 155.000");
 let autosPorsche = [boxster20];
 
+// CONSULTAR PRECIOS POR MARCA
 function preciosAlfaRomeo(){
     for(let i = 0; i < autosAlfaRomeo.length; i++){
         console.log(autosAlfaRomeo[i].consultarPrecio());
@@ -110,3 +112,10 @@ module.exports = {
     preciosCoradir,
     preciosPorsche
 };
+
+module.exports = {
+    giulia20, giuliaQ, stelvio20, stelvioQ,
+    seagull30, seagull40,
+    chiki, tito,
+    boxster20
+}
