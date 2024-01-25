@@ -5,5 +5,4 @@ function consultarPrecio(auto){
     return "El " + auto.marca + " " + auto.modelo + " " + auto.version + " cuesta: " + auto.precio;
 }
 
-// console.log(consultarPrecio(autosUruguay.turboS));
-console.log(autosUruguay.consultarModelos(autosUruguay.autosPorsche));
+autosUruguay.autos;
