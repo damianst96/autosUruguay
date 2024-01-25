@@ -53,6 +53,7 @@ class Porsche {
 }
 
 
+//CREAR AUTOS
 let giulia20 = new AlfaRomeo("Alfa Romeo", "Giulia", "2.0 Turbo 200 AT8 Distinctive", "U$S 69.900");
 let giuliaQ = new AlfaRomeo("Alfa Romeo", "Giulia", "2.9 V6 Bi-Turbo AT8 Quadrifoglio", "U$S 209.990");
 let stelvio20 = new AlfaRomeo("Alfa Romeo", "Stelvio", "2.0 Turbo 280 AT8 Super", "U$S 113.490");
@@ -66,12 +67,14 @@ let autosBYD = [seagull30, seagull40];
 
 
 let tito = new Coradir("Coradir", "Tito", "S2-100", "U$S 16.500");
-let chiki = new Coradir("Coradir", "Chiki-Tito", "", "U$S 6.500");
+let chiki = new Coradir("Coradir", "Chiki-Tito", "CT-45", "U$S 6.500");
 let autosCoradir = [chiki, tito];
 
 
 let boxster20 = new Porsche("Porsche", "Boxster", "2.0 T PDK", "U$S 155.000");
-let autosPorsche = [boxster20];
+let turboS = new Porsche("Porsche", "911 Turbo S", "3.8 Coupé Bi-T PDK", "U$S 350.000");
+let autosPorsche = [boxster20, turboS];
+
 
 // CONSULTAR PRECIOS POR MARCA
 function preciosAlfaRomeo(){
@@ -98,6 +101,16 @@ function preciosPorsche(){
     }
 }
 
+
+// CONSULTAR MODELOS POR MARCA
+function consultarModelos(marca){
+    console.log("Todos los modelos de " + marca[0].marca);
+    for(let i = 0; i < marca.length; i++){
+        console.log(marca[i].modelo + " " + marca[i].version);
+    }
+}
+
+// EXPORTACIÓN
 module.exports = {
     AlfaRomeo, 
     BYD, 
@@ -110,12 +123,13 @@ module.exports = {
     preciosAlfaRomeo,
     preciosBYD,
     preciosCoradir,
-    preciosPorsche
+    preciosPorsche,
+    consultarModelos
 };
 
 module.exports = {
     giulia20, giuliaQ, stelvio20, stelvioQ,
     seagull30, seagull40,
     chiki, tito,
-    boxster20
+    boxster20, turboS
 }
